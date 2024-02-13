@@ -22,7 +22,7 @@ def simulate_rock_sizes(mean, std_dev, num_rocks):
      """
     return [random.gauss(mean, std_dev) for _ in range(num_rocks)]
 
-# mean assumption, standard deviation assumption, and number of rock in pile of rocks
+# mean assumption, standard deviation assumption, and amount of rock in pile of rocks
 rock_sizes = simulate_rock_sizes(0.75, 0.1, int(1e6))
 
 # Filter the rocks that are too big for a 1"x1" screen and too small for a 3/8"x3/8" screen
