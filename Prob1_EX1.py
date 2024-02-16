@@ -4,7 +4,7 @@
 # Assumption: The range is broken into 6 sections (standard deviations) with
 #             + or - 3 standard deviations representing 99.7% of the possible numbers
 #             in the appropriate range. I also added a check to ensure the samples only included
-#             rocks in the specified range.
+#             rocks in the specified range. (The sieving technology is assumed to be excellent)
 
 import random
 
@@ -67,4 +67,4 @@ mean_of_sampling_means = sum(sampling_means) / num_cycles
 variance_of_sampling_means = sum((x - mean_of_sampling_means) ** 2 for x in sampling_means) / (num_cycles - 1)
 
 print(f"Mean of Sampling Mean: {mean_of_sampling_means:.4f}")
-print(f"Variance of Sampling Mean: {variance_of_sampling_means:.4f}")
+print(f"Variance of Sampling Mean: {variance_of_sampling_means:.8f}")
