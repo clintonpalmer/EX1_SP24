@@ -8,8 +8,8 @@
 #                   same for each sample.
 #      Specific Mean of Supplier A is the center of the acceptable range = 0.6875
 #      Specific Mean of Supplier B is the center of the acceptable range = 0.4375
-#      The rocks are normally distributed over +/- 3 standard deviations
-#          for each supplier.
+#      The rocks are normally distributed over +/- 3 standard deviations for each supplier.
+#      The "sieving" process rejects ALL unwanted rock sizes.
 #      The t_stat variable uses the "Mean of sampling means" and the "Variance
 #          of sampling means", derived by Prob1_EX1.py, to perform its calculation.
 
