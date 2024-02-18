@@ -26,9 +26,8 @@ def supplier_A():
     :upper_bound: maximum allowable size defined by supplier
     :       mean: the average of the normally distributed sizes
     :    std_dev: the variability of normally distributed rock sizes with respect to the mean
-    :             1 standard deviation =
     :     return: 100 rocks are sampled 11 times. The mean and variance of the
-    :                 of the 11 samples are returned.
+    :               11 samples are returned.
     """
     #Size range of rocks
     lower_bound = .375
@@ -36,7 +35,7 @@ def supplier_A():
     mean = (upper_bound + lower_bound) / 2
     std_dev = (upper_bound - lower_bound) / 6
     results, mean_of_sampling_means, variance_of_sampling_means = statistics(mean, std_dev, num_cycles, tot_per_sample, lower_bound, upper_bound)
-    print(f"Supplier A:\n Mean of sampling means: {mean_of_sampling_means:.6f}\n Variance of Sampling Means: {variance_of_sampling_means:.6f}")
+    print(f"Supplier A:\n   Mean of sampling means: {mean_of_sampling_means:.6f}\n   Variance of Sampling Means: {variance_of_sampling_means:.6f}")
     return mean_of_sampling_means, variance_of_sampling_means
 #supplier_A() # for debugging
 
@@ -47,7 +46,7 @@ def supplier_B():
     mean = (upper_bound + lower_bound) / 2
     std_dev = (upper_bound - lower_bound) / 6
     results, mean_of_sampling_means, variance_of_sampling_means = statistics(mean, std_dev, num_cycles, tot_per_sample, lower_bound, upper_bound)
-    print(f"Supplier B:\n Mean of sampling means: {mean_of_sampling_means:.6f}\n Variance of Sampling Means: {variance_of_sampling_means:.6f}")
+    print(f"Supplier B:\n   Mean of sampling means: {mean_of_sampling_means:.6f}\n   Variance of Sampling Means: {variance_of_sampling_means:.6f}")
     return mean_of_sampling_means, variance_of_sampling_means
 #supplier_B()  # for debugging
 
