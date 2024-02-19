@@ -1,6 +1,6 @@
 #
 # The code runs for about 1 minute when the rock population is set to 5 million.
-# see line 34 to change rock population if needed.
+# see line 29 to change rock population if needed.
 # Unblock section at bottom to generate output
 # Block section at bottom before running Problem 2
 #
