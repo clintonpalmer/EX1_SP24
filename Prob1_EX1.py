@@ -22,13 +22,8 @@ def collect_population(mean, std_dev, tot_per_sample):
     Although a rock is unlikely to be outside the specified range, I added a filter process that inspects
     each rock to ensure it is in the suppliers expected size range.
     :rock_population: Generates a random normal distribution of rocks using specified mean and standard deviation.
-    :collect_rocks: Extracts 100 random numbers into a list
-    :while loop:  Simulates the sieving process, ensuring all rocks in a sample
-                  are within the specified size range.
-    The while loop runs when a rock size is determined to be out of range.
-    The batch is checked to ensure all rocks are within the lower and upper bound; if not,
-    the "while loop" conditions are true, and the sample is thrown out, and another batch of
-    rocks are generated until all 100 rocks are within the lower and upper bound.
+    :collect_rocks: Extracts 100 random size rocks into a list
+    :return:  the sizes of rocks are put into a list and returned to the variable "data" in the statistics function.
     Gemini assisted in developing this function
     """
     rock_population = [random.normalvariate(mean, std_dev) for _ in range(5000000)]
@@ -45,9 +40,9 @@ def calculate_statistics(data):
                     x̄ = ( Σ xi ) / n
     :sample_variance: The measure of the variability from the sample mean.
                     s² = Σ (xi - x̄)² / (n - 1)
-
     Returns:
         the sample mean and sample variance.
+    Gemini assisted in developing this function
     """
     sample_mean = sum(data) / len(data)
     sample_variance = sum((x - sample_mean) ** 2 for x in data) / (len(data) - 1)
@@ -67,6 +62,7 @@ def statistics(mean, std_dev, num_cycles, tot_per_sample):
     :     return: 100 rocks are sampled 11 times. The "sample mean" and "sample variance" for
     :                 each of the 11 samples are returned, then the "Mean of sampling means" and
     :                 "Variance of sampling means" are returned
+    Gemini assisted in developing this function
     """
     n = num_cycles
     sampling_means = []
