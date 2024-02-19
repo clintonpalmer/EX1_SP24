@@ -1,14 +1,14 @@
 #
 # The code runs for about 1 minute when the rock population is set to 5 million.
-# see line 35 to change rock population if needed.
+# see line 34 to change rock population if needed.
 # Unblock section at bottom to generate output
 # Block section at bottom before running Problem 2
 #
-# Assumption: The specific mean of the normal distribution is centered in the
-#             range of acceptable size rocks.
-# Assumption: The range is broken into 6 sections (standard deviations) with
-#             +/- 3 standard deviations representing 99.7% of the possible rock
-#             sizes are in the appropriate range.
+# Assumptions: The specific mean of the normal distribution is centered in the
+#              range of acceptable size rocks.
+#              The range is broken into 6 sections (standard deviations) with
+#              +/- 3 standard deviations representing 99.7% of possible rock
+#              sizes.
 
 import random
 num_cycles = 11
