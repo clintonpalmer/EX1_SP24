@@ -24,7 +24,7 @@ def collect_population(mean, std_dev, tot_per_sample):
     :return:  the sizes of rocks are put into a list and returned to the variable "data" in the statistics function.
     Gemini assisted in developing this function
     """
-    rock_population = [random.normalvariate(mean, std_dev) for _ in range(5000)]
+    rock_population = [random.normalvariate(mean, std_dev) for _ in range(5000000)]
     collect_rocks = random.sample(rock_population, tot_per_sample)
 
 #   print(collect_rocks) #for debugging
