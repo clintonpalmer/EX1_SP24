@@ -1,6 +1,6 @@
 #
 # The code runs for about 1 minute when the rock population is set to 5 million.
-# see line 29 to change rock population if needed.
+# see line 27 to change rock population if needed.
 # Unblock section at bottom to generate output
 # Block section at bottom before running Problem 2
 #
@@ -18,15 +18,13 @@ std_dev = (1 - 0.375) / 6
 
 def collect_population(mean, std_dev, tot_per_sample):
     """
-    This function simulates the post sieving process that produced a normally distributed pile of rocks.
-    Although a rock is unlikely to be outside the specified range, I added a filter process that inspects
-    each rock to ensure it is in the suppliers expected size range.
+    This function simulates the sieving process that produces a normally distributed pile of rocks.
     :rock_population: Generates a random normal distribution of rocks using specified mean and standard deviation.
     :collect_rocks: Extracts 100 random size rocks into a list
     :return:  the sizes of rocks are put into a list and returned to the variable "data" in the statistics function.
     Gemini assisted in developing this function
     """
-    rock_population = [random.normalvariate(mean, std_dev) for _ in range(5000000)]
+    rock_population = [random.normalvariate(mean, std_dev) for _ in range(5000)]
     collect_rocks = random.sample(rock_population, tot_per_sample)
 
 #   print(collect_rocks) #for debugging
